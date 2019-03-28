@@ -1,0 +1,57 @@
+<h2>{{ titulo }}</h2>
+
+<p>Añadir marca</p>
+<p>
+    <input type="text" [(ngModel)]="miMarca" (blur)="onBlur()" (Keyup.enter)="mostrarPalabra1()" (keyup)="mostrarPalabra2()">
+    <button (click)="getMarca()" >Mostrar marca</button>
+    <button (click)="addMarca()" >Añadir marca</button>
+    <button (click)="removeMarca()" >Eliminar marca</button>
+</p>
+<p><strong>{{miMarca}}</strong></p>
+
+<p>Las mejores marcas de zapatillas</p>
+<ul>
+    <li *ngFor="let marks of marcas; let indice = index">{{(indice + 1) + " - " + marks}}
+        <button (click)="deleteMarca(indice)">Borrar</button>
+    </li>
+</ul>
+<p>Las deportivas disponibles: </p>
+<ul>
+     <li *ngFor="let deportiva of zapatillas">
+        <span [ngStyle]="{
+            'text-decoration': !deportiva.stock ? 'line-through' : 'none'
+        }">
+        {{ deportiva.name }} -
+        <strong
+        [class.altoPrecio]="deportiva.price >= 100"
+        [ngClass]="{
+            'colorRojo': deportiva.price >= 120,
+            'subrayado': deportiva.mark == 'Nike'
+        }">
+        ${{ deportiva.price }}</strong>
+        <span *ngIf="deportiva.price <= 80"
+        [style.color]="deportiva.price <= 80 ? 'white' : 'transparent' "
+        [style.background]="deportiva.price <= 80 ? 'green' : 'transparent' "
+        > ¡EN OFERTA!</span>
+        </span>
+    </li >
+</ul>
+
+<p>El color de la mayoria de nuestras zapatillas es: (yellow, red, blue, orange)</p>
+<p>
+    <input type="text" [(ngModel)] = "color">
+</p>
+<ul [ngSwitch] = "color">
+    <li *ngSwitchCase = "'yellow'">
+        El color predominante es el <span [ngStyle]="{ background: color }">{{ color }}</span>.
+    </li>
+    <li *ngSwitchCase = "'red'">
+        El color predominante es el <span [ngStyle]="{ background: color }">{{ color }}</span>.
+    </li>
+    <li *ngSwitchCase = "'blue'">
+        El color predominante es el <span [ngStyle]="{ background: color }">{{ color }}</span>.
+    </li>
+    <li *ngSwitchCase = "'orange'">
+        El color predominante es el <span [ngStyle]="{ background: color }">{{ color }}</span>.
+    </li>
+</ul>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>Contactanos</title>
+	<link rel="stylesheet" href="css/repaso.css">
+</head>
+<body>
+	<!--Encabezado-->
+	<h1>Mi Primera Web!</h1>
+	<!--Menu-->
+	<ul>
+		<li><a href="index.html" title="inicio">Inicio</a></li>
+		<li><a href="contenido.html" title="Cotenidos">Contenidos</a></li>
+		<li><a href="contactanos.html" title="Contactanos">Contacto</a></li>
+		<li><a href="http://www.nibbleframe.com" title="NibbleFrame" target="_blank">NibbleFrame</a></li>
+	</ul>
+	<hr>
+	<!--Contenido de contactanos.html-->
+	<h2>Contactanos</h2>
+	<form action="">
+		<p>
+			<label for="nombre">Nombre:</label>
+			<input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+		</p>
+		<p>
+			<label for="descripcion">Descripcion:</label>
+			<br>
+			<textarea name="descripcion" id="descripcion" cols="30" rows="10" required></textarea>
+		</p>
+		<p>
+			<label for="edad">Edad:</label>
+			<br>
+			<select name="edad" id="edad" required>
+				<option value="-18">Menor de Edad</option>
+				<option value="+18">Mayor de Edad</option>
+				<option value="+60">Mayor de 60 años</option>
+			</select>
+		</p>
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>

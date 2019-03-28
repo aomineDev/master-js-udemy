@@ -1,0 +1,26 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+h1{
+	text-align: center;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+.zebra{
+	border: 5px dashed black;
+}
+.size{
+	font-size: 2rem;
+}
+.margenSuperior{
+	margin-top: 20px;
+	display: block;
+}
+.resultado{
+	color: #ccc;
+}

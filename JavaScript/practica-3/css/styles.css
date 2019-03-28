@@ -1,0 +1,17 @@
+.box{
+	width: 250px;
+	float: left;
+	margin: 20px;
+}
+.dashed{
+	border: 3px dashed black;
+	height: 250px;
+}
+#p, #p1, #p2, #p3{
+	margin: 10px;
+	font-family: sans-serif;
+}
+#p{
+	text-align: center;
+	font-weight: bold;
+}
